@@ -1,0 +1,49 @@
+The expected traffic estimated by the business team is 1000 users per hour. However, this estimation is
+too general. Assuming an equal distribution, we can expect:
+- ~170 requests per minute
+- ~3 requests per second
+
+However, in reality, equal distribution is rarely seen. There may be an 80% activity of users in first 30 minutes and
+20% in the second 30 minutes. Which gives ~260 requests per minute and ~4 requests per second.
+
+After running a stress testing session, it was discovered that:
+
+First run:
+    Duration: 5 min
+    Users: 1
+    Req/s: Jmeter: ~ 4.5 | K6: ~4.5 | Locust: ~ 4.4
+    Average Latency: Jmeter: ~220 | K6: ~220  Locust: ~220
+    Error rate: Jmeter: 0% | K6: 0% | Locust: 0%
+
+Comment: The goal of first run was to check if the tests can be successfully run and there are no basic issues.
+
+Second run:
+    Duration: 5 min
+    Users: 5
+    Req/s: Jmeter: ~ 9.7 | K6: ~ 9.3 | Locust: ~ 9.5
+    Average Latency: Jmeter: ~530 | K6: ~530 | Locust: ~500
+    Error rate: Jmeter: 0% | K6: 0% | Locust: 0%
+
+Comment: The second run shows that the application can handle three times more load per second than the equal
+distribution assumes.
+
+Third run:
+    Duration: 5 min
+    Users: 10
+    Req/s: Jmeter: ~ 8.25 | K6: ~ 8.9 | Locust: ~ 9.71
+    Average Jmeter: ~ 1145 | K6: ~1000 | Latency: Locust: ~988
+    Error rate: Jmeter: 2.82% | K6: 1.72% | Locust: 0.15%
+
+Comment: Third run uncovered the first limitation of the app, with around 2% error rate given there's a ~9 req/s load.
+However, note that the indicated average ~9 req/s is a result of error responses that increased the waiting times and
+decreased the throughput.
+
+Recommendation:
+Given the above tests results, we can conclude that the second run may stand as a reference point for the alerting tresholds.
+The error rates are 0% however, the average latency becomes high and crossing this level may turn out to be a bad experience
+for the users.
+
+Thus, it is recommended to set the following alarming tresholds for the application load:
+1. 9 requests per second
+2. 540 requests per minute
+3. 32000 requests per hour

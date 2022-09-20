@@ -1,0 +1,34 @@
+{
+  "name": "loadkatasapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "app": "node index.js",
+    "app-dev": "nodemon inedx.js",
+    "run-mongo": "docker run --name loadKatasDB -p 27017:27017 -d mongo:latest",
+    "kill-mongo": "docker stop loadKatasDB && docker rm loadKatasDB",
+    "swagger-autogen": "node swagger.js",
+    "_jmeter": "export $(cat .env | grep \"^[^#;]\" |xargs) && jmeter -n -t ${JMX_SCRIPT} -f -l ${CSV_REPORT} -e -o ${HTML_REPORT} -Jthreads=${NO_OF_USERS} -Jduration=$((${RUN_TIME} * 60)) && open ${HTML_REPORT}/index.html",
+    "run-k6-utils": "docker-compose -f utils/docker-compose.yml up -d && open http://localhost:3001",
+    "stop-k6-utils": "docker-compose -f utils/docker-compose.yml down",
+    "_k6": "export $(cat .env | grep \"^[^#;]\" |xargs) && k6 run --out influxdb=${INFLUXDB} --vus ${NO_OF_USERS} --duration ${RUN_TIME}m ${JS_SCRIPT}",
+    "_locust": "export $(cat .env | grep \"^[^#;]\" |xargs) && locust -f ${PY_SCRIPT} --headless -u ${NO_OF_USERS} --run-time ${RUN_TIME}m"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "express-rate-limit": "^6.6.0",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "swagger-autogen": "^2.21.5",
+    "swagger-ui-express": "^4.5.0"
+  }
+}
