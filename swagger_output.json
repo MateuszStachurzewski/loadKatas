@@ -1,0 +1,336 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Load Katas App",
+    "description": "An app for practicing performance testing",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Health check",
+        "description": "An endpoint to check if the app is ready and running.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/booksApp/register": {
+      "post": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Create a user",
+        "description": "An endpoint that allows you to create a user with username and password.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "language": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "country": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "currency": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/booksApp/login": {
+      "post": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Login",
+        "description": "An endpoint that allows you to login with username and password.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/booksApp/basket": {
+      "get": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Get your basket",
+        "description": "An endpoint that allows you to get the contents of your basket.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Add a book to your basket",
+        "description": "An endpoint that allows you to add a book to your basket using the book",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/booksApp/basket/reset": {
+      "get": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Reset your all baskets",
+        "description": "An endpoint that allows you to remove all baskets from the database.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/booksApp/books": {
+      "get": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Get all books.",
+        "description": "An endpoint that allows you to get all books stored by the database.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Search for a particular book",
+        "description": "An endpoint that allows you to search for a particular book using the book",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/booksApp/books/:id": {
+      "get": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Get the details of the book.",
+        "description": "An endpoint that allows you to get details of a particular book",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/booksApp/orders": {
+      "post": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Submit an order",
+        "description": "An endpoint that allows you to submit an order, meaning, buy the books that are in the current basket.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "basketID": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/booksApp/settings": {
+      "get": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Get user settings",
+        "description": "An endpoint that allows you to get user",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/booksApp/user": {
+      "get": {
+        "tags": [
+          "Books App"
+        ],
+        "summary": "Get user",
+        "description": "An endpoint that allows you to get user",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }
+  }
+}

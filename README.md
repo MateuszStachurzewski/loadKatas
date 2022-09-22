@@ -1,39 +1,96 @@
-# Description
-This repository contains a Load Katas App. 
-Currently the App consists of one API called booksApp. 
-However, the goal of this app is to include several different APIs. 
-All APIs are prepared with the aim of providing an environment for practicing 
-load testing katas.
+<p align="center">
+    <img src="utils/static/logo.png" width="400" alt="Load Katas"/>
+</p>
+<hr style="border:1px solid gray">
+
+###Develop your skills in performance testing.
+
+## General info
+This project will help you practice load testing. It includes a LoadKatas app which is 
+a custom-developed application that exposes an API which you can leverage when trying out different
+load test scripts. 
+
+In addition to the LoadKatas app, you can find here a set of katas - challenges that 
+are tool agnostic and give you the context and the purpose for running different 
+load testing scenarios. 
+
+[Note: more katas will be published soon...]
 
 ## Prerequisties
 1. Docker https://docs.docker.com/desktop/install/mac-install/
 2. Node https://nodejs.org/en/download/
-3. Load testing tool: jmeter / k6 / locust
-4. Postman [optional]
 
-## How to run
+Additionally, you will need a load testing tool of your choice. This project provides solutions
+for the katas in three specific tools: jmeter, k6 and locust. However, feel free to experiment
+with any tool you want.
 
-1. Run database
-``npm run run-db``
+## Run LoadKatas app
 
-2. Run app
-``npm run app``
+Start in the root `/loadKatas`
 
-3. Kill db
-``npm run kill-db``
+```
+npm install
+npm run run-mongo
+npm run app
+```
 
-Note: that the database does not persist data when reset.
-If you want to clean the db state, just kill the container 
-and run it again.
+The above will:
+* install dependencies from package.json 
+* run dockerized mongo database 
+* run LoadKatas app
+
+## Stop LoadKatas app
+```
+Ctrl+C 
+npm run kill-mongo
+```
+
+Note: that the database does not persist data when you kill the docker container.
 
 ## Katas
+
+### Prerequisites
+You're going to need a load testing tool. Install it on your own.
+
+* Jmeter: https://octoperf.com/blog/2017/10/26/how-to-install-jmeter-mac/
+* K6: https://k6.io/docs/getting-started/installation/
+* Locust: https://docs.locust.io/en/stable/installation.html
+
+### Support
+The project includes a support for jmeter, k6 and locust test runs. 
+If you want to use it, run:
+```
+cp .env_example .env
+```
+`.env` file includes some variables that will help you keep the configuration in one place.
+You can set there the place of your script and the test run config. 
+
+Next, run one of the following commands:
+```
+npm run _jmeter
+```
+```
+npm run _k6
+```
+```
+npm run _locust
+```
+Each command will load env variables from `.env` file and will run the tool
+using the configuration that you specified in the file.
+
+### Challenges
+
 Go to `/katas` directory to learn more about katas.
 
-## App
-The reasoning behind this API is to run it locally. We want to avoid 
-overhead like deployments and any possible cloud limits. By setting the app
-locally, you can hit the API as long as you want and with as many threads as 
-your machine allows you. 
+## LoadKatas App
+LoadKatas app is a custom-developed application that exposes an API that can
+be leveraged for load testing purposes. The goal of the project is to 
+expose more than one API. 
+
+The app should be run locally because:
+* you don't have to deal with deployments
+* you don't have to worry about clouds capacity limits
+* you don't have to saturate your bandwidth
 
 ### Throttling & Latency
 In order to simulate a behaviour of an application under load, the app was wrapped with
@@ -45,68 +102,16 @@ latency from certain points.
 Throttling - the endpoints will handle load successfully only to some point, even if the latency is high. 
 However, once this point is achieved, the endpoints will start returning errors.
 
-### Development
+### API Documentation
+Run `npm run swagger-autogen`.
 
-4. Run in development mode: ``npm run app-dev``
+The command will run the app in the swagger mode. 
+The documentation will be available under: http://localhost:3000/doc/#/
+
+## Development
+
+If you have ideas for the project and you want to contribute:
+
+``npm run app-dev``
 
 Note: The development mode runs nodemon which reloads the app everytime you save changes.
-
-## Postman
-
-The postman collection will help you understand the APIs. 
-Some requests include scripting in the Postman's `Tests` section where 
-some variables are fetched and published as global, for further use in other requests.
-
-You can also use a swagger documentation:
-
-Run swagger: ``npm run swagger-autogen``
-
-Note: The documentation will be available under: http://localhost:3000/doc/#/
-
-
-## Load testing tools
-Since each kata will include solutions in three different tools, there are some utils that may help you
-run them.
-
-First, run:
-```
-cp .env_example .env
-```
-
-Note: Remember to modify the .env file with the paths of katas that you're going to solve.
-Also, the .env file includes variables that allows you to configure load test runs including paths 
-to the test scripts.
-
-### jmeter
-you need to have this tool configured locally. If you do, then you can use:
-```
-npm run _jmeter
-```
-Using this command will run the script and generate an html report for you.
-
-
-### k6
-again you need to install this by yourself. Once it's installed, you can utilize two commands:
-```
-npm run run-k6-utils
-```
-This command will run influxdb and grafana which will allow you to monitor the results of your tests.
-```
-npm run _k6
-``` 
-This command will run your tests in k6. It will make k6 send the results of your tests to influxdb. 
-Thanks to this, they will be available in grafana. 
-In terms of grafana, you will have to import a preconfigured dashboard: https://k6.io/docs/results-visualization/influxdb-+-grafana/#:~:text=edit%20the%20metric%3A-,Preconfigured%20Grafana%20dashboards,-You%20can%20find
-
-### locust
-You don't need to install locust, you can use python venv.
-```
-npm run locust_venv
-```
-To run the tests, you can use:
-```
-npm run _locust
-```
-
-Note that all of the above commands include a command that loads .env file values.
-Given you're .env file is configured properly, you don't have to go anywhere else when running load tests.
