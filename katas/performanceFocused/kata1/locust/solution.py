@@ -59,25 +59,14 @@ class BooksAppUser(HttpUser):
             'Content-Type': 'application/json',
         }
         self.client.post(url="orders", headers=headers, data=json.dumps(payload))
-    
-    def find_book(self):
+
+    @task
+    def user_journey(self):
         self.go_to_main_page()
         self.search_for_books_by_name()
-    
-    def add_to_basket(self):
         if self.book_id is not None:
             self.go_to_books_details()
             self.add_book_to_basket()
-        return
-
-    def buy_book(self):
         if self.basket_id is not None:
             self.go_to_basket()
             self.submit_order()
-        return
-
-    @task
-    def hello_world(self):
-        self.find_book()
-        self.add_to_basket()
-        self.buy_book()

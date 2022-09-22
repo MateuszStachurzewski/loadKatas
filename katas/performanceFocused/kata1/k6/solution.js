@@ -1,13 +1,4 @@
 import http from 'k6/http';
-import {
-    group
-} from 'k6';
-
-export const options = {
-    vus: 1,
-    iterations: 2
-    // duration: '60s'
-};
 
 const baseUrl = 'http://localhost:3000/api/booksApp/'
 
@@ -94,26 +85,20 @@ const submitOrder = (basketId) => {
 
 export default function() {
     let bookId;
-    group('Find a book', () => {
-        goToMainPage();
-        const res = searchForBookByName()
+    goToMainPage();
+    const res = searchForBookByName()
+    if (res) {
+        bookId = res._id;
+    }
+    if (bookId) {
+        goToBooksDetails(bookId);
+        addBookToBasket(bookId);
+    }
+    if (bookId) {
+        const res = goToBasket()
         if (res) {
-            bookId = res._id;
+            const basketId = res._id
+            submitOrder(basketId);
         }
-    })
-    group('Add to basket', () => {
-        if (bookId) {
-            goToBooksDetails(bookId);
-            addBookToBasket(bookId);
-        }
-    })
-    group('Buy a book', () => {
-        if (bookId) {
-            const res = goToBasket()
-            if (res) {
-                const basketId = res._id
-                submitOrder(basketId);
-            }
-        }
-    })
+    }
 }
