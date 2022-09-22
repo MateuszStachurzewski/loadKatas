@@ -4,7 +4,7 @@ import logging
 import json
 
 class BooksAppUser(HttpUser):
-    host = 'http://localhost:3000/api/booksApp/'
+    host = 'http://localhost:3000/api/v1/booksApp/'
     
     book_id = ''
     basket_id = ''

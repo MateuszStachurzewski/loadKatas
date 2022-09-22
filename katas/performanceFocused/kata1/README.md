@@ -1,6 +1,6 @@
 ## Name: Find your limits Kata
 
-### App: booksApp
+### App: BooksApp v1
 
 ### Description
 

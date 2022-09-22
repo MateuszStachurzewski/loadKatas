@@ -1,6 +1,6 @@
 import http from 'k6/http';
 
-const baseUrl = 'http://localhost:3000/api/booksApp/'
+const baseUrl = 'http://localhost:3000/api/v1/booksApp/'
 
 const goToMainPage = () => {
     const url = baseUrl + '/books'

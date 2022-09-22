@@ -5,8 +5,8 @@ const { registerValidation, loginValidation } = require('../utils/validation');
 const Basket = require("../models/Basket");
 
 router.post('/register', async (req, res) => {
-    // #swagger.path = '/api/booksApp/register'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/register'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Create a user'
     // #swagger.description = 'An endpoint that allows you to create a user with username and password.'
     /*  #swagger.parameters['obj'] = {
@@ -84,8 +84,8 @@ const updateSessionBasket = async(sessionID, userID) => {
 };
 
 router.post('/login', async (req, res) => {
-    // #swagger.path = '/api/booksApp/login'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/login'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Login'
     // #swagger.description = 'An endpoint that allows you to login with username and password.'
     /*  #swagger.parameters['obj'] = {

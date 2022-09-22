@@ -1,11 +1,11 @@
 const Basket = require('../models/Basket')
 const {addBookToBasketValidation} = require("../utils/validation");
 const router = require('express').Router();
-const { trafficLimiter } = require('../../../utils/trafficLimiter')
+const { trafficLimiter } = require('../../../../utils/trafficLimiter')
 
 router.get('/', trafficLimiter, async (req, res) => {
-    // #swagger.path = '/api/booksApp/basket'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/basket'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Get your basket'
     // #swagger.description = 'An endpoint that allows you to get the contents of your basket.'
 
@@ -32,8 +32,8 @@ router.get('/', trafficLimiter, async (req, res) => {
 })
 
 router.post('/', trafficLimiter, async (req, res) => {
-    // #swagger.path = '/api/booksApp/basket'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/basket'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Add a book to your basket'
     // #swagger.description = 'An endpoint that allows you to add a book to your basket using the book's id.'
     /*  #swagger.parameters['obj'] = {
@@ -86,8 +86,8 @@ router.post('/', trafficLimiter, async (req, res) => {
 })
 
 router.get('/reset', trafficLimiter, async (req, res) => {
-    // #swagger.path = '/api/booksApp/basket/reset'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/basket/reset'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Reset your all baskets'
     // #swagger.description = 'An endpoint that allows you to remove all baskets from the database.'
 

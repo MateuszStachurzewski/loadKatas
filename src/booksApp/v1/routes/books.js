@@ -1,12 +1,12 @@
 const Book = require("../models/Book");
 const {searchBookValidation} = require("../utils/validation");
 const router = require('express').Router();
-const { get } = require('../../../utils/trafficRecorder')
-const { trafficLimiter } = require('../../../utils/trafficLimiter')
+const { get } = require('../../../../utils/trafficRecorder')
+const { trafficLimiter } = require('../../../../utils/trafficLimiter')
 
 router.get('/', trafficLimiter, async (req, res) => {
-    // #swagger.path = '/api/booksApp/books'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/books'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Get all books.'
     // #swagger.description = 'An endpoint that allows you to get all books stored by the database.'
 
@@ -21,8 +21,8 @@ router.get('/', trafficLimiter, async (req, res) => {
 })
 
 router.get('/:id', trafficLimiter, async (req, res) => {
-    // #swagger.path = '/api/booksApp/books/:id'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/books/:id'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Get the details of the book.'
     // #swagger.description = 'An endpoint that allows you to get details of a particular book'
 
@@ -39,8 +39,8 @@ router.get('/:id', trafficLimiter, async (req, res) => {
 })
 
 router.post('/', trafficLimiter, async (req, res) => {
-    // #swagger.path = '/api/booksApp/books'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/books'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Search for a particular book'
     // #swagger.description = 'An endpoint that allows you to search for a particular book using the book's name.'
     /*  #swagger.parameters['obj'] = {

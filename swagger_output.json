@@ -26,10 +26,10 @@
         }
       }
     },
-    "/api/booksApp/register": {
+    "/api/v1/booksApp/register": {
       "post": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Create a user",
         "description": "An endpoint that allows you to create a user with username and password.",
@@ -78,10 +78,10 @@
         }
       }
     },
-    "/api/booksApp/login": {
+    "/api/v1/booksApp/login": {
       "post": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Login",
         "description": "An endpoint that allows you to login with username and password.",
@@ -114,10 +114,10 @@
         }
       }
     },
-    "/api/booksApp/basket": {
+    "/api/v1/booksApp/basket": {
       "get": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Get your basket",
         "description": "An endpoint that allows you to get the contents of your basket.",
@@ -133,7 +133,7 @@
       },
       "post": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Add a book to your basket",
         "description": "An endpoint that allows you to add a book to your basket using the book",
@@ -162,10 +162,10 @@
         }
       }
     },
-    "/api/booksApp/basket/reset": {
+    "/api/v1/booksApp/basket/reset": {
       "get": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Reset your all baskets",
         "description": "An endpoint that allows you to remove all baskets from the database.",
@@ -180,10 +180,10 @@
         }
       }
     },
-    "/api/booksApp/books": {
+    "/api/v1/booksApp/books": {
       "get": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Get all books.",
         "description": "An endpoint that allows you to get all books stored by the database.",
@@ -199,7 +199,7 @@
       },
       "post": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Search for a particular book",
         "description": "An endpoint that allows you to search for a particular book using the book",
@@ -228,10 +228,10 @@
         }
       }
     },
-    "/api/booksApp/books/:id": {
+    "/api/v1/booksApp/books/:id": {
       "get": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Get the details of the book.",
         "description": "An endpoint that allows you to get details of a particular book",
@@ -246,10 +246,10 @@
         }
       }
     },
-    "/api/booksApp/orders": {
+    "/api/v1/booksApp/orders": {
       "post": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Submit an order",
         "description": "An endpoint that allows you to submit an order, meaning, buy the books that are in the current basket.",
@@ -278,10 +278,10 @@
         }
       }
     },
-    "/api/booksApp/settings": {
+    "/api/v1/booksApp/settings": {
       "get": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Get user settings",
         "description": "An endpoint that allows you to get user",
@@ -305,10 +305,10 @@
         }
       }
     },
-    "/api/booksApp/user": {
+    "/api/v1/booksApp/user": {
       "get": {
         "tags": [
-          "Books App"
+          "Books App v1"
         ],
         "summary": "Get user",
         "description": "An endpoint that allows you to get user",

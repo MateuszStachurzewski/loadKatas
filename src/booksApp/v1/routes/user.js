@@ -2,11 +2,11 @@ const jwt = require("jsonwebtoken");
 const router = require('express').Router();
 const User = require('../models/User');
 const verify = require('../utils/verifyToken')
-const { trafficLimiter } = require('../../../utils/trafficLimiter')
+const { trafficLimiter } = require('../../../../utils/trafficLimiter')
 
 router.get('/', [verify, trafficLimiter], async (req, res) => {
-    // #swagger.path = '/api/booksApp/user'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/user'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Get user's info'
     // #swagger.description = 'An endpoint that allows you to get user's info like name, email and date of creation'
 

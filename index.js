@@ -1,8 +1,8 @@
 const express = require('express');
 const health = require('./src/health')
-const booksApp = require('./src/booksApp/app')
+const booksAppV1 = require('./src/booksApp/v1/app')
 
-const { seedDB } = require('./src/booksApp/dummyData/seeds')
+const { seedDB } = require('./src/booksApp/v1/dummyData/seeds')
 const { trafficRecorder } = require('./utils/trafficRecorder')
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -56,7 +56,7 @@ app.use(session({
 // Routes
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 app.use('/api/health', health)
-app.use('/api/booksApp', booksApp)
+app.use('/api/v1/booksApp', booksAppV1)
 
 app.listen(3000, () => {
     console.log('Listening on port 3000...')

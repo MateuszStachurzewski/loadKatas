@@ -3,12 +3,12 @@ const swaggerAutogen = require('swagger-autogen')()
 const outputFile = './swagger_output.json'
 const endpointsFiles = [
     './src/health.js',
-    './src/booksApp/routes/auth.js',
-    './src/booksApp/routes/basket.js',
-    './src/booksApp/routes/books.js',
-    './src/booksApp/routes/orders.js',
-    './src/booksApp/routes/settings.js',
-    './src/booksApp/routes/user.js'
+    './src/booksApp/v1/routes/auth.js',
+    './src/booksApp/v1/routes/basket.js',
+    './src/booksApp/v1/routes/books.js',
+    './src/booksApp/v1/routes/orders.js',
+    './src/booksApp/v1/routes/settings.js',
+    './src/booksApp/v1/routes/user.js'
 ]
 
 const doc = {

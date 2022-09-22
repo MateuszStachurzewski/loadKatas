@@ -1,6 +1,6 @@
 ## Name: Warmup Kata
 
-### App: booksApp
+### App: BooksApp v1
 
 ### Description
 When designing load tests you may focus on at least two paths:

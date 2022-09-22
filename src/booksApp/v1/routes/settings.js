@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const verify = require('../utils/verifyToken')
 const User = require("../models/User");
-const { trafficLimiter } = require('../../../utils/trafficLimiter')
+const { trafficLimiter } = require('../../../../utils/trafficLimiter')
 
 router.get('/', [verify, trafficLimiter], async (req, res) => {
-    // #swagger.path = '/api/booksApp/settings'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/settings'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Get user settings'
     // #swagger.description = 'An endpoint that allows you to get user's settings like language, country and currency'
 

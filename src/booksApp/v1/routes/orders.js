@@ -1,11 +1,11 @@
 const Basket = require("../models/Basket");
 const {orderSubmitValidation} = require("../utils/validation");
 const router = require('express').Router();
-const { trafficLimiter } = require('../../../utils/trafficLimiter')
+const { trafficLimiter } = require('../../../../utils/trafficLimiter')
 
 router.post('/', trafficLimiter, async (req, res) => {
-    // #swagger.path = '/api/booksApp/orders'
-    // #swagger.tags = ['Books App']
+    // #swagger.path = '/api/v1/booksApp/orders'
+    // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Submit an order'
     // #swagger.description = 'An endpoint that allows you to submit an order, meaning, buy the books that are in the current basket.'
     /*  #swagger.parameters['obj'] = {

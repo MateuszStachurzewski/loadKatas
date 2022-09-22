@@ -9,7 +9,7 @@ export const options = {
     // duration: '60s'
 };
 
-const baseUrl = 'http://localhost:3000/api/booksApp/'
+const baseUrl = 'http://localhost:3000/api/v1/booksApp/'
 
 const goToMainPage = () => {
     const url = baseUrl + '/books'
