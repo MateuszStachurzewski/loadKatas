@@ -1,4 +1,4 @@
-import http from 'k6/http';
+    import http from 'k6/http';
 const baseUrl = 'http://localhost:3000/api/v1/booksApp/'
 
 const goToMainPage = () => {
