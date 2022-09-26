@@ -1,4 +1,4 @@
-## Name: Warmup Kata
+## Warmup Kata
 
 ### App: BooksApp v1
 
@@ -42,7 +42,7 @@ Organizing paths in groups may turn out to be handy e.g.:
 - any other reason that is dictated by the project's needs
 
 ### Tips:
-- read the repository's `/loadKatasApp/README.md`
+- read the repository's `/loadKatas/README.md`
 - take a look at swagger endpoint of the booksApp
 - I encourage you to extracting some variables 
 and passing them to other paths

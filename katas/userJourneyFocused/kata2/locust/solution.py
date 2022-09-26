@@ -1,5 +1,6 @@
 from locust import HttpUser, task
 import locust_plugins
+import random
 import logging
 import json
 
@@ -12,18 +13,6 @@ class BooksAppUser(HttpUser):
     
     def go_to_main_page(self):
         res = self.client.get("books")
-        # logging.info(res)
-        # logging.info(res.json())
-
-    def search_for_books_by_name(self):
-        payload = {
-            "name": "It Ends with Us: A Novel"
-        }
-        headers = {
-            'Content-Type': 'application/json',
-        }
-        res = self.client.post(url="books", headers=headers, data=json.dumps(payload))
-        self.book_id = res.json().get('_id', None)
         # logging.info(res)
         # logging.info(res.json())
 
@@ -59,25 +48,38 @@ class BooksAppUser(HttpUser):
             'Content-Type': 'application/json',
         }
         self.client.post(url="orders", headers=headers, data=json.dumps(payload))
-    
-    def find_book(self):
-        self.go_to_main_page()
-        self.search_for_books_by_name()
-    
-    def add_to_basket(self):
-        if self.book_id is not None:
-            self.go_to_books_details()
-            self.add_book_to_basket()
-        return
 
-    def buy_book(self):
-        if self.basket_id is not None:
-            self.go_to_basket()
-            self.submit_order()
-        return
+    def filter_random_book(self, books):
+        randomBook = random.choice(books)
+        logging.info(randomBook)
+
+
+    def pick_random_book(self):
+        resp = self.go_to_main_page()
+        logging.info(resp)
+        # if resp:
+        #     random_book_id = filter_random_book(resp);
+
+        # self.go_to_books_details()
+
+    def loop(self, times, method):
+        for _ in range(times):
+            return method()
 
     @task
     def user_journey(self):
-        self.find_book()
-        self.add_to_basket()
-        self.buy_book()
+        self.pick_random_book()
+        # self.loop()
+
+
+
+
+        #
+        # if self.book_id is not None:
+        #
+        #     self.add_book_to_basket()
+        # if self.basket_id is not None:
+        #     self.go_to_basket()
+        #     self.submit_order()
+
+

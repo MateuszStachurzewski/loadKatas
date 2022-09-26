@@ -10,7 +10,7 @@ router.get('/', trafficLimiter, async (req, res) => {
     // #swagger.summary = 'Get all books.'
     // #swagger.description = 'An endpoint that allows you to get all books stored by the database.'
 
-    const objConfig = { _id: 0, name: 1, author: 1, description: 1}
+    const objConfig = { _id: 1, name: 1, author: 1, description: 1}
 
     try {
         const books = await Book.find({}).select(objConfig)

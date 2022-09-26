@@ -1,4 +1,4 @@
-## Name: Find your limits Kata
+## Find your limits
 
 ### App: BooksApp v1
 
