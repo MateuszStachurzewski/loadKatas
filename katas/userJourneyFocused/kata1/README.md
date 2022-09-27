@@ -43,7 +43,7 @@ Organizing paths in groups may turn out to be handy e.g.:
 
 ### Tips:
 - read the repository's `/loadKatas/README.md`
-- take a look at swagger endpoint of the booksApp
+- take a look at swagger endpoints of the booksApp
 - I encourage you to extracting some variables 
 and passing them to other paths
 - basket is assigned either to sessionId or userId

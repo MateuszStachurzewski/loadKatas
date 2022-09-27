@@ -32,7 +32,7 @@ Create a user journey that would represent the behaviour described above.
 
 ### Tips:
 - read the repository's `/loadKatas/README.md`
-- take a look at swagger endpoint of the booksApp v1
+- take a look at swagger endpoints of the booksApp v1
 - basket is assigned either to sessionId or userId
 
 
