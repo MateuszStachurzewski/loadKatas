@@ -4,3 +4,4 @@ jmeter.log
 .idea
 node_modules
 utils/locust
+__pycache__

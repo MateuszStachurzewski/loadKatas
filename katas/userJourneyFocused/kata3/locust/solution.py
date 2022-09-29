@@ -2,14 +2,45 @@ from locust import HttpUser, task
 import locust_plugins
 import logging
 import json
+import uuid
 
 class BooksAppUser(HttpUser):
     host = 'http://localhost:3000/api/v1/booksApp/'
-    
+
+    email = ''
+    name = ''
+    password = 'TestPassword'
     book_id = ''
     basket_id = ''
-    
-    
+
+    def create_account(self):
+        payload = {
+            "name": self.name,
+            "email": self.email,
+            "password": self.password,
+            "language": "English",
+            "country": "Poland",
+            "currency": "USD"
+        }
+        headers = {
+            'Content-Type': 'application/json',
+        }
+        res = self.client.post(url="register", headers=headers, data=json.dumps(payload))
+        # logging.info(res)
+        # logging.info(res.json())
+
+    def login(self):
+        payload = {
+            "email": self.email,
+            "password": self.password
+        }
+        headers = {
+            'Content-Type': 'application/json',
+        }
+        res = self.client.post(url="login", headers=headers, data=json.dumps(payload))
+        # logging.info(res)
+        # logging.info(res.json())
+
     def go_to_main_page(self):
         res = self.client.get("books")
         # logging.info(res)
@@ -59,25 +90,23 @@ class BooksAppUser(HttpUser):
             'Content-Type': 'application/json',
         }
         self.client.post(url="orders", headers=headers, data=json.dumps(payload))
-    
-    def find_book(self):
-        self.go_to_main_page()
-        self.search_for_books_by_name()
-    
-    def add_to_basket(self):
-        if self.book_id is not None:
-            self.go_to_books_details()
-            self.add_book_to_basket()
-        return
 
-    def buy_book(self):
-        if self.basket_id is not None:
-            self.go_to_basket()
-            self.submit_order()
-        return
+    def on_start(self):
+        # Generate email
+        self.email = f'{uuid.uuid4()}@gmail.com'
+        self.name = f'{uuid.uuid4()}'
+        self.go_to_main_page()
+        self.create_account()
 
     @task
     def user_journey(self):
-        self.find_book()
-        self.add_to_basket()
-        self.buy_book()
+        self.go_to_main_page()
+        self.login()
+        self.go_to_main_page()
+        self.search_for_books_by_name()
+        if self.book_id is not None:
+            self.go_to_books_details()
+            self.add_book_to_basket()
+        if self.basket_id is not None:
+            self.go_to_basket()
+            self.submit_order()
