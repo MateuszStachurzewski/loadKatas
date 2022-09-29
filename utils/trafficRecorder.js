@@ -1,11 +1,11 @@
 let noOfRequests = 0;
 
 setInterval(function() {
-    noOfRequests = Math.floor(noOfRequests * 0.5);
+    noOfRequests = 0;
 }, 1000)
 
 const trafficRecorder = (req, res, next) => {
-    noOfRequests = noOfRequests + 0.55
+    noOfRequests++;
 
     console.log(`No of requests/s: ${Math.floor(noOfRequests)}`)
     next()

@@ -19,6 +19,7 @@ const limitOptions = {
     max: 15,
     handler: function(req, res, next) {
         setTimeout(function() {
+            console.log('Applied throttling')
             return res.status(429).json({
                 error: 'You sent too many requests. Please wait a while then try again'
             })

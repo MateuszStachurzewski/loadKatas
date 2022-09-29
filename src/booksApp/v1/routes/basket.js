@@ -73,6 +73,7 @@ router.post('/', trafficLimiter, async (req, res) => {
     } else {
         basket = new Basket({
             sessionID: sessionID,
+            userID: userID,
             bookIDs: [bookID],
         })
 

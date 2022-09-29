@@ -3,8 +3,9 @@ const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const { registerValidation, loginValidation } = require('../utils/validation');
 const Basket = require("../models/Basket");
+const {trafficLimiter} = require("../../../../utils/trafficLimiter");
 
-router.post('/register', async (req, res) => {
+router.post('/register', trafficLimiter, async (req, res) => {
     // #swagger.path = '/api/v1/booksApp/register'
     // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Create a user'
@@ -33,6 +34,17 @@ router.post('/register', async (req, res) => {
     }
 
     if(emailExists) return res.status(400).send('Email already exists');
+
+    let nameExists;
+
+    try {
+        nameExists = await User.findOne({name: req.body.name})
+    } catch (err) {
+        res.status(400).send(err)
+    }
+
+    if(nameExists) return res.status(400).send('Name already exists');
+
 
     const user = new User({
        name: req.body.name,
@@ -83,7 +95,7 @@ const updateSessionBasket = async(sessionID, userID) => {
     )
 };
 
-router.post('/login', async (req, res) => {
+router.post('/login', trafficLimiter, async (req, res) => {
     // #swagger.path = '/api/v1/booksApp/login'
     // #swagger.tags = ['Books App v1']
     // #swagger.summary = 'Login'
@@ -114,9 +126,6 @@ router.post('/login', async (req, res) => {
     const sessionBasedBasket = await findSessionBasedBasket(sessionID);
     const userBasedBasket = await findUserBasedBasket(user._id);
 
-    console.log(`Session based basket: ${sessionBasedBasket}`)
-    console.log(`User based basket: ${userBasedBasket}`)
-
     if (userBasedBasket) {
         try {
            await updateUserBasket(user._id, sessionID)
@@ -125,7 +134,6 @@ router.post('/login', async (req, res) => {
         }
         if (sessionBasedBasket) {
             try {
-               console.log('test')
                 await mergeCurrentBasketWithExisting(user._id, sessionID, sessionBasedBasket.bookIDs)
             } catch (err) {
                 return res.status(400).send(err)
