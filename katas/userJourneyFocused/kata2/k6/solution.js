@@ -1,5 +1,22 @@
-    import http from 'k6/http';
+import http from 'k6/http';
 const baseUrl = 'http://localhost:3000/api/v1/booksApp/'
+
+export const options = {
+  scenarios: {
+    firstTimeShopper: {
+      executor: 'per-vu-iterations',
+      exec: 'userJourneyLookingForBook',
+      vus: 2,
+      iterations: 15
+    },
+    loyalShopper: {
+      executor: 'per-vu-iterations',
+      exec: 'userJourneyBuyingBook',
+      vus: 2,
+      iterations: 5
+    },
+  },
+};
 
 const goToMainPage = () => {
     const url = baseUrl + '/books'
@@ -61,51 +78,44 @@ const submitOrder = (basketId) => {
     return res
 };
 
-const loop = (options) => {
-    let resp;
-    [...Array(options.times)].forEach((item, i) => {
-        resp = options.callback(i)
-    });
-    return resp;
-};
 
 const filterRandomBook = (books) => {
     const randomBook = books[Math.floor(Math.random()*books.length)];
     return randomBook["_id"]
 };
 
-const pickRandomBook = function() {
-    const resp = goToMainPage();
-    if (resp) {
-        const randomBookId = filterRandomBook(resp.json());
-        goToBooksDetails(randomBookId);
-        return randomBookId
-    }
-};
 
-const randomExecutor = (funcs) => {
-    const randomNumber = Math.floor(Math.random() * funcs.length)
-    const func = funcs[randomNumber].func
-    const args = funcs[randomNumber].args
-    return func(args)
-};
+export function userJourneyLookingForBook() {
+    const mainPageResp = goToMainPage();
 
-export default function() {
-    const funcsToExecute = [
-        {
-            func: loop, args: {times: 3, callback: pickRandomBook}
-        },
-        {
-            func: pickRandomBook, args: {}
-        }
-    ]
-    const randomBookId = randomExecutor(funcsToExecute)
-    if (randomBookId) {
-        addBookToBasket(randomBookId);
-        const res = goToBasket()
-        if (res) {
-            const basketId = res._id
-            submitOrder(basketId);
-        }
+    if (!mainPageResp) {
+        throw Error('No response from main page')
     }
+
+    const randomBookId = filterRandomBook(mainPageResp.json());
+
+    goToBooksDetails(randomBookId);
+}
+
+
+export function userJourneyBuyingBook() {
+    const mainPageResp = goToMainPage();
+
+    if (!mainPageResp) {
+        throw Error('No response from main page')
+    }
+
+    const randomBookId = filterRandomBook(mainPageResp.json());
+
+    goToBooksDetails(randomBookId);
+    addBookToBasket(randomBookId);
+
+    const basketResp = goToBasket()
+
+    if (!basketResp) {
+        throw Error('No response from basket')
+    }
+
+    const basketId = basketResp._id
+    submitOrder(basketId);
 }

@@ -78,8 +78,8 @@ const searchForBookByName = () => {
     };
 
     const res = http.post(url, payload, params)
-    // console.log(res.status)
-    // console.log(res.body)
+    console.log(res.status)
+    console.log(res.body)
     try {
         return res.json()
     } catch (err) {

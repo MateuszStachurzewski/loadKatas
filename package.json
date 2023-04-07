@@ -13,6 +13,7 @@
     "run-k6-utils": "docker-compose -f utils/docker-compose.yml up -d && open http://localhost:3001",
     "stop-k6-utils": "docker-compose -f utils/docker-compose.yml down",
     "_k6": "export $(cat .env | grep \"^[^#;]\" |xargs) && k6 run --out influxdb=${INFLUXDB} --vus ${NO_OF_USERS} --duration ${RUN_TIME}m ${JS_SCRIPT}",
+    "_k6_no_params": "export $(cat .env | grep \"^[^#;]\" |xargs) && k6 run ${JS_SCRIPT}",
     "_locust": "export $(cat .env | grep \"^[^#;]\" |xargs) && locust -f ${PY_SCRIPT} --headless -u ${NO_OF_USERS} --run-time ${RUN_TIME}m"
   },
   "author": "",

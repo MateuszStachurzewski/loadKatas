@@ -109,7 +109,7 @@ router.post('/login', trafficLimiter, async (req, res) => {
     } */
 
     const { error } = loginValidation(req.body);
-    if (error) return res.send(400).send(error.details[0].message)
+    if (error) return res.status(400).send(error.details[0].message)
 
     const user = await User.findOne({email: req.body.email});
     if (!user) return res.status(400).send('Email or password is wrong');

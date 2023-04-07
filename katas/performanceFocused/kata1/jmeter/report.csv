@@ -1,0 +1,240 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1669789726461,269,Go to main page,200,OK,User Journey 1-1,text,true,,4142,169,1,1,http://localhost:3000/api/v1/booksApp/books,260,0,27
+1669789726738,226,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,224,0,0
+1669789727006,224,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,223,0,0
+1669789727235,231,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,230,0,0
+1669789727468,215,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,215,0,0
+1669789727687,228,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,228,0,0
+1669789727917,220,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,220,0,0
+1669789728139,218,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789728366,218,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,217,0,0
+1669789728586,227,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,219,0,0
+1669789728817,214,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,212,0,0
+1669789729034,543,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,542,0,0
+1669789729581,219,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,219,0,0
+1669789729803,229,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,229,0,0
+1669789730035,217,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,216,0,0
+1669789730254,222,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,219,0,0
+1669789730478,216,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789730698,214,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,213,0,0
+1669789730914,220,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,219,0,0
+1669789731137,219,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,219,0,0
+1669789731361,216,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,216,0,0
+1669789731587,227,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,227,0,0
+1669789731816,213,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,213,0,0
+1669789732031,515,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,515,0,0
+1669789732550,220,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,220,0,0
+1669789732772,221,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,221,0,0
+1669789732997,215,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,214,0,0
+1669789733213,222,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789733437,231,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,231,0,0
+1669789733672,231,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,231,0,0
+1669789733907,213,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,213,0,0
+1669789734121,219,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789734342,216,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,215,0,0
+1669789734559,229,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,223,0,0
+1669789734790,231,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,231,0,0
+1669789735024,530,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,530,0,0
+1669789735557,219,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,217,0,0
+1669789735777,219,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,219,0,0
+1669789736003,218,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,218,0,0
+1669789736224,223,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,220,0,0
+1669789736450,231,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,230,0,0
+1669789736684,229,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,229,0,0
+1669789736915,217,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,217,0,0
+1669789737136,228,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,228,0,0
+1669789737365,218,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,218,0,0
+1669789737588,225,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789737815,214,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,213,0,0
+1669789738031,522,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,522,0,0
+1669789738555,218,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,217,0,0
+1669789738775,217,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,216,0,0
+1669789738995,212,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,212,0,0
+1669789739214,216,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,215,0,0
+1669789739432,216,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,215,0,0
+1669789739650,219,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,219,0,0
+1669789739872,219,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,219,0,0
+1669789740103,213,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,213,0,0
+1669789740320,215,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,215,0,0
+1669789740537,228,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,220,0,0
+1669789740770,243,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,243,0,0
+1669789741014,529,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,529,0,0
+1669789741546,221,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,221,0,0
+1669789741772,219,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,217,0,0
+1669789741993,242,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,241,0,0
+1669789742237,223,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,222,0,0
+1669789742471,220,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,219,0,0
+1669789742699,221,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,221,0,0
+1669789742922,218,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789743142,236,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,236,0,0
+1669789743380,223,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,223,0,0
+1669789743606,220,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,220,0,0
+1669789743827,212,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,211,0,0
+1669789744042,523,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,523,0,0
+1669789744572,218,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,217,0,0
+1669789744792,216,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,216,0,0
+1669789745016,217,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,215,0,0
+1669789745235,218,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789745454,214,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,214,0,0
+1669789745672,224,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,223,0,0
+1669789745902,216,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,216,0,0
+1669789746121,219,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,217,0,0
+1669789746344,241,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,238,0,0
+1669789746587,229,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,229,0,0
+1669789746819,217,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789747039,522,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,521,0,0
+1669789747564,214,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,213,0,0
+1669789747784,223,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,221,0,0
+1669789748010,219,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,218,0,0
+1669789748235,219,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,218,0,0
+1669789748464,218,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,218,0,0
+1669789748687,217,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,217,0,0
+1669789748907,209,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,209,0,0
+1669789749117,215,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,215,0,0
+1669789749335,214,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,214,0,0
+1669789749551,218,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789749772,217,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789749995,518,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,518,0,0
+1669789750515,215,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,215,0,0
+1669789750732,213,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,213,0,0
+1669789750949,217,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,216,0,0
+1669789751171,233,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,228,0,0
+1669789751408,239,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,238,0,0
+1669789751650,241,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,241,0,0
+1669789751896,219,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789752116,223,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,223,0,0
+1669789752342,215,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,215,0,0
+1669789752558,218,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789752778,217,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789753001,520,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,519,0,0
+1669789753522,220,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789753747,225,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,224,0,0
+1669789753978,229,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,229,0,0
+1669789754212,232,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,229,0,0
+1669789754446,215,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,214,0,0
+1669789754665,221,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,220,0,0
+1669789754888,218,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789755108,216,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,216,0,0
+1669789755330,213,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,213,0,0
+1669789755545,216,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789755763,220,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789755984,522,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,522,0,0
+1669789756509,224,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,223,0,0
+1669789756735,217,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,216,0,0
+1669789756954,215,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,214,0,0
+1669789757170,222,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,221,0,0
+1669789757395,221,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,221,0,0
+1669789757621,225,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,224,0,0
+1669789757848,217,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,217,0,0
+1669789758069,521,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,518,0,0
+1669789758598,224,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,223,0,0
+1669789758826,213,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,212,0,0
+1669789759041,218,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789759261,220,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,220,0,0
+1669789759483,216,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,216,0,0
+1669789759700,215,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,214,0,0
+1669789759918,216,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,216,0,0
+1669789760135,219,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789760356,219,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,219,0,0
+1669789760578,220,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,220,0,0
+1669789760799,219,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789761021,516,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,516,0,0
+1669789761539,217,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,214,0,0
+1669789761757,217,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789761977,212,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,212,0,0
+1669789762191,246,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,246,0,0
+1669789762439,224,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,223,0,0
+1669789762666,228,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,228,0,0
+1669789762895,217,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,216,0,0
+1669789763113,215,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,211,0,0
+1669789763328,218,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,218,0,0
+1669789763548,221,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,221,0,0
+1669789763773,222,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789763997,516,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,516,0,0
+1669789764516,222,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,222,0,0
+1669789764741,243,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,241,0,0
+1669789764987,216,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789765207,219,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,219,0,0
+1669789765428,216,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,215,0,0
+1669789765648,219,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,216,0,0
+1669789765869,220,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,220,0,0
+1669789766091,519,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,519,0,0
+1669789766613,208,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,208,0,0
+1669789766823,221,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,220,0,0
+1669789767045,218,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789767265,247,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,246,0,0
+1669789767514,223,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,222,0,0
+1669789767745,245,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,241,0,0
+1669789767991,215,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,215,0,0
+1669789768208,225,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,225,0,0
+1669789768435,215,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,214,0,0
+1669789768651,225,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,224,0,0
+1669789768879,214,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,214,0,0
+1669789769094,525,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,521,0,0
+1669789769621,248,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,248,0,0
+1669789769873,236,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,234,0,0
+1669789770119,221,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,220,0,0
+1669789770341,220,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,220,0,0
+1669789770565,215,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,213,0,0
+1669789770782,230,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,220,0,0
+1669789771015,515,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,514,0,0
+1669789771532,217,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,217,0,0
+1669789771751,215,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,215,0,0
+1669789771968,217,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,216,0,0
+1669789772190,232,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,232,0,0
+1669789772424,230,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,228,0,0
+1669789772655,219,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,218,0,0
+1669789772878,223,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,223,0,0
+1669789773107,517,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,517,0,0
+1669789773626,219,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,219,0,0
+1669789773849,208,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,208,0,0
+1669789774061,217,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789774279,218,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,216,0,0
+1669789774499,220,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,220,0,0
+1669789774728,219,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789774952,220,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,215,0,0
+1669789775174,219,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,217,0,0
+1669789775395,221,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,221,0,0
+1669789775617,212,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,212,0,0
+1669789775833,219,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,219,0,0
+1669789776054,516,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,516,0,0
+1669789776572,219,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,219,0,0
+1669789776793,216,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,216,0,0
+1669789777011,217,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789777231,214,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,214,0,0
+1669789777447,224,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,224,0,0
+1669789777673,219,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,219,0,0
+1669789777894,216,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,216,0,0
+1669789778116,517,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,516,0,0
+1669789778635,218,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789778855,211,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,211,0,0
+1669789779068,219,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,219,0,0
+1669789779289,221,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,217,0,0
+1669789779511,218,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,217,0,0
+1669789779731,213,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,213,0,0
+1669789779946,223,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,218,0,0
+1669789780170,217,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789780390,228,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,227,0,0
+1669789780621,218,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789780841,218,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,218,0,0
+1669789781062,514,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,514,0,0
+1669789781577,218,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789781799,216,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,215,0,0
+1669789782017,221,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,221,0,0
+1669789782240,215,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,215,0,0
+1669789782457,216,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,215,0,0
+1669789782676,219,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,219,0,0
+1669789782897,220,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,220,0,0
+1669789783119,523,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,523,0,0
+1669789783644,242,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,242,0,0
+1669789783888,211,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,211,0,0
+1669789784100,220,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,220,0,0
+1669789784322,212,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,211,0,0
+1669789784535,218,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789784755,215,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,215,0,0
+1669789784972,223,Submit order,200,OK,User Journey 1-1,text,true,,342,341,1,1,http://localhost:3000/api/v1/booksApp/orders,223,0,0
+1669789785196,217,Go to main page,200,OK,User Journey 1-1,text,true,,3977,273,1,1,http://localhost:3000/api/v1/booksApp/books,217,0,0
+1669789785415,219,Search for a book by name,200,OK,User Journey 1-1,text,true,,778,338,1,1,http://localhost:3000/api/v1/booksApp/books,219,0,0
+1669789785638,215,Go to book's details,200,OK,User Journey 1-1,text,true,,819,298,1,1,http://localhost:3000/api/v1/booksApp/books/63844d2695f1b805a5bab86c,215,0,0
+1669789785855,220,Add the book to basket,200,OK,User Journey 1-1,text,true,,330,334,1,1,http://localhost:3000/api/v1/booksApp/basket,217,0,0
+1669789786077,518,Go to basket,200,OK,User Journey 1-1,text,true,,483,274,1,1,http://localhost:3000/api/v1/booksApp/basket,517,0,0

@@ -15,9 +15,9 @@ This sprint, your job was to test out how the app will handle the traffic given 
 for discounts but also users who tend to come back and do regular shopping as logged in users. 
 
 ### Task
-Create a user journey that would represent the behaviours described above.
+Create a user journey that would represent the behaviour described above.
 
-#### User aiming to get a discount for first time shoppers
+#### New user aiming to get a discount for first time shoppers
 
 1. Go to main page with books listing
 2. Search for a book by name
@@ -29,10 +29,11 @@ Create a user journey that would represent the behaviours described above.
 8. Return to the basket
 9. Submit order
 
-#### Retained user collecting loaylty points
-1. Got o main page with books listing
-2. Log in to the account
-3. Return to the main page
+#### Retained user collecting loyalty points
+
+1. Go to main page with books listing
+2. Log in
+3. Go back to main page with books listing
 4. Search for a book by name
 5. Go to book's details
 6. Add the book to basket
@@ -45,6 +46,8 @@ Create a user journey that would represent the behaviours described above.
 - both user journeys are executed interchangeably
 - the ratio of execution between user journeys is random
 - your solution can be run on 10 users
+- account for the first time shopper is created for each scenario run
+- account for the loyal shopper is created for each spawned user
 
 ### Tips:
 - read the repository's `/loadKatas/README.md`

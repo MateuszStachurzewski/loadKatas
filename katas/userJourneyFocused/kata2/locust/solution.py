@@ -7,9 +7,9 @@ import json
 class BooksAppUser(HttpUser):
     host = 'http://localhost:3000/api/v1/booksApp/'
 
-    books = []
-    book_id = ''
-    basket_id = ''
+    books = None
+    book_id = None
+    basket_id = None
     
     
     def go_to_main_page(self):
@@ -55,45 +55,41 @@ class BooksAppUser(HttpUser):
         random_book = random.choice(self.books)
         self.book_id = random_book.get('_id')
 
-    def pick_random_book(self):
+
+    @task(3)
+    def user_journey_looking_for_book(self):
         self.go_to_main_page()
-        if self.books:
-            self.filter_random_book()
 
-        if self.book_id:
-            self.go_to_books_details()
+        if not self.books:
+            raise Exception('Books list is empty')
 
-    def loop(self, args):
-        for _ in range(args.get('times')):
-            args.get('method')()
+        self.filter_random_book()
 
-    def random_executor(self, methods):
-        random_method = random.choice(methods)
-        method = random_method.get('method')
-        args = random_method.get('args')
-        if args:
-            method(args)
-        else:
-            method()
+        if not self.book_id:
+            raise Exception('book_id is not defined')
 
-    @task
-    def user_journey(self):
-        methods_to_execute = [
-            {
-                'method': self.loop,
-                'args': {'times': 3, 'method': self.pick_random_book}
-             },
-            {
-                'method': self.pick_random_book,
-                'args': None
-             }
-        ]
-        self.random_executor(methods_to_execute)
+        self.go_to_books_details()
 
-        if self.book_id is not None:
-            self.add_book_to_basket()
-        if self.basket_id is not None:
-            self.go_to_basket()
-            self.submit_order()
 
+    @task(1)
+    def user_journey_buying_a_book(self):
+        self.go_to_main_page()
+
+        if not self.books:
+            raise Exception('Books list is empty')
+
+        self.filter_random_book()
+
+        if not self.book_id:
+            raise Exception('book_id is not defined')
+
+        self.go_to_books_details()
+        self.add_book_to_basket()
+        self.go_to_basket()
+
+        if not self.basket_id:
+            raise Exception('basket_id is not defined')
+
+
+        self.submit_order()
 
